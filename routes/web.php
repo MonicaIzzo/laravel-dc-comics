@@ -65,7 +65,7 @@ Route::get('/shop', [ShopController::class, 'shop'])->name('shop');
 
 
 // Rotta per pagina COMICS
-Route::get('/comics/index', [ComicsController::class, 'index'])->name('comics.index'); // mostra la lista dei COMICS
+//Route::get('/comics/index', [ComicsController::class, 'index'])->name('comics.index'); // mostra la lista dei COMICS
 
 
 
@@ -86,4 +86,4 @@ Route::delete('/comics/comic/{comic}', [ComicController::class, 'destroy'])->nam
 
 
 // Rotta per risorsa COMIC
-Route::resource('comic', ComicController::class);
+Route::resource('comics', ComicController::class);
