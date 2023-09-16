@@ -18,8 +18,10 @@
             <div class="row text-white">
                 @forelse ($comics as $comic)
                     <div class="col-2 mb-3">
-                        <img class="mb-2" src={{ Vite::asset('resources/img/card.jpg') }} alt="">
-                        <div class="text-uppercase">Title</div>
+                        <a href="{{ route('comics.show', $comic) }}">
+                            <img class="mb-2" src={{ $comic['thumb'] }} alt={{ $comic['title'] }}>
+                            <div class="text-uppercase">{{ $comic['title'] }}</div>
+                        </a>
                     </div>
                 @empty
                     <h2>NON CI SONO COMIC DA MOSTRARE</h2>
