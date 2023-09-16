@@ -4,6 +4,8 @@
 {{-- Setto il titolo della pagina --}}
 @section('title', 'GAMES')
 
+{{-- Setto l'id della pagina --}}
+@section('section-id', 'games')
 
 {{-- Setto il main della pagina (che cambiera in base alla pagina) --}}
 @section('main_content')

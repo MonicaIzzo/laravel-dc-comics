@@ -5,6 +5,10 @@
 @section('title', 'VIDEOS')
 
 
+{{-- Setto l'id della pagina --}}
+@section('section-id', 'videos')
+
+
 {{-- Setto il main della pagina (che cambiera in base alla pagina) --}}
 @section('main_content')
 

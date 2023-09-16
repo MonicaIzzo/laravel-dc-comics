@@ -22,7 +22,11 @@
 
     {{-- Contenuto del MAIN che varia ad ogni PAGINA --}}
     <main class="container-fluid bg-dark pb-5" id="main">
-        @yield('main_content')
+        <section id=@yield('section_id')>
+            @yield('main_content')
+        </section>
+
+
     </main>
 
     {{-- Importiamo la sez. Services --}}
