@@ -1,1 +1,263 @@
 @import '~bootstrap/scss/bootstrap';
+
+.logo {
+    width: 70px;
+}
+
+#hero {
+    background-color: #f04997;
+    height: 300px;
+    background-image: url(../img/jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .title-hero {
+        color: white;
+    }
+
+    .section {
+        color: white;
+        padding: 10px 20px;
+        background-color: #0282f9;
+        width: 200px;
+        font-weight: 800;
+        position: absolute;
+        top: 280px;
+
+    }
+}
+#main_page {
+    position: relative;
+}
+
+#title_page {
+    position: relative;
+    top: -20px;
+}
+#loghi {
+    margin-top: -8px;
+
+    img {
+        height: 50px;
+    }
+    p {
+        line-height: 46px;
+    }
+}
+
+#short-menu {
+    height: 500px;
+
+    h5 {
+        padding-top: 30px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+    }
+}
+
+#DC-COMICS,
+#SHOP,
+#DC,
+#SITES {
+    padding-right: 30px;
+}
+
+.footer {
+    background-color: #303030;
+    a {
+        display: inline-block;
+        border: solid 2px #0282f9;
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+
+        
+
+       
+        }
+                a:hover {
+                    display: inline-block;
+                    border: solid 2px #0282f9;
+                    background-color: #0282f9;
+                    padding: 10px 20px;
+                    color: white;
+                }
+    }
+                
+.credit {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.short-menu-bg {
+    height: 100%;
+    background-image: url(../img/dc-logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+#short-menu {
+    background-color: black;
+    color: #959595;
+    height: 400px;
+    background-image: url('../img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.load_more {
+    background-color: #0282f9;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.load_more:hover {
+    background-color: #303030;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+#main {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// SINGLE COMIC
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.fascia {
+    height: 80px;
+    position: relative;
+    top: -20px;
+}
+
+#single_comic {
+    width: 160px;
+    position: absolute;
+    top: -260px;
+    border: white solid 1px;
+
+    .type,
+    .gallery {
+        color: white;
+        text-align: center;
+    }
+}
+
+#comic-decription {
+    h1 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        padding-top: 100px;
+
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    h5 {
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    h6 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        color: #0282f9;
+        text-transform: uppercase;
+    }
+}
+
+#prince {
+    background-color: #55ba59;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .prince_sx {
+        width: 100%;
+        border-right: white solid 1px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .prince_dx {
+        width: 200px;
+        align-items: center;
+    }
+
+    p {
+        margin-left: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-right: 5px;
+    }
+}
+
+.description {
+    line-height: 2rem;
+    padding: 20px 0;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    background-color: #f6f6f6;
+    padding: 10px;
+    border-top: #e3e3e3 solid 1px;
+
+    #talent {
+        flex-basis: 50%;
+    }
+
+    #specs {
+        flex-basis: 50%;
+    }
+
+}
+
+.row {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+
+}
+
+.column-1 {
+    flex-basis: 20%;
+    padding-right: 10px;
+    border-top: #e3e3e3 solid 1px;
+}
+
+.column-2 {
+    flex-basis: 80%;
+    padding-right: 10px;
+    border-top: #e3e3e3 solid 1px;
+}
