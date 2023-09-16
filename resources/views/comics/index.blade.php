@@ -28,9 +28,12 @@
                 @endforelse
             </div>
         </div>
-        <div class="load text-center">
-            <a class="load_more">LOAD MORE</a>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="load text-center">
+                <a class="load_more" href="{{ route('comics.create') }}">Aggiungi un COMIC</a>
+            </div>
         </div>
+
     </div>
 
 
