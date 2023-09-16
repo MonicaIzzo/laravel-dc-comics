@@ -5,7 +5,7 @@
 @section('title', 'FAN')
 
 {{-- Setto l'id della pagina --}}
-@section('section-id', 'fans)
+@section('section-id', 'fan')
 
 {{-- Setto il main della pagina (che cambiera in base alla pagina) --}}
 @section('main_content')
