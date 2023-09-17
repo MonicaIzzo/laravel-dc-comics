@@ -87,11 +87,20 @@
                 </div>
             </div>
         </div>
-        <div class="load text-center">
-            <a class="load_more" href="{{ route('comics.index') }}">Torna indietro</a>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="load text-center">
+                <a class="load_more me-3" href="{{ route('comics.create') }}">Aggiungi un COMIC</a>
+            </div>
+            <div class="load text-center">
+                <a class="load_more me-3" href="{{ route('comics.edit', $comic->id) }}">Modifica un COMIC</a>
+            </div>
+            <div class="load text-center">
+                <a class="load_more" href="{{ route('comics.index') }}">Torna indietro</a>
+            </div>
+
+
         </div>
-    </div>
 
 
 
-@endsection
+    @endsection
