@@ -13,6 +13,17 @@
     <div class="container" id="main_page">
         <h4 class="text-white bg-primary w-25 p-1 ps-2" id="title_page">INSERISCI UN COMIC</h4>
 
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         {{-- FORM --}}
         <div class="container">
             <form method="POST" action="{{ route('comics.update', $comic) }}">
@@ -24,7 +35,7 @@
                         <div class="mb-3">
                             <label for="title" class="form-label">Titolo:</label>
                             <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                                name="title" value="{{ $comic->title }}" required>
+                                name="title" value="{{ old('title', $comic->title) }}" required>
                         </div>
                     </div>
                     {{-- DESCRIZIONE --}}
@@ -40,7 +51,7 @@
                         <div class="mb-3">
                             <label for="thumb" class="form-label">Copertina:</label>
                             <input type="url" class="form-control @error('thumb') is-invalid @enderror" id="thumb"
-                                name="thumb" value="{{ $comic->thumb }}">
+                                name="thumb" value="{{ old('thumb', $comic->thumb) }}">
                         </div>
                     </div>
                     {{-- ANTEPRIMA COPERTINA --}}
@@ -54,7 +65,7 @@
                         <div class="mb-3">
                             <label for="price" class="form-label">Prezzo:</label>
                             <input type="text" class="form-control @error('price') is-invalid @enderror" id="price"
-                                name="price" required value="{{ $comic->price }}">
+                                name="price" required value="{{ old('price', $comic->price) }}">
                         </div>
                     </div>
                     {{-- SERIE --}}
@@ -62,15 +73,15 @@
                         <div class="mb-3">
                             <label for="series" class="form-label">Serie:</label>
                             <input type="text" class="form-control @error('series') is-invalid @enderror" id="series"
-                                name="series" value="{{ $comic->series }}">
+                                name="series" value="{{ old('series', $comic->series) }}">
                         </div>
                     </div>
                     {{-- DATA DI USCITA --}}
                     <div class="col-3 mb-3">
                         <div class="mb-3">
-                            <label for="sale-date" class="form-label">Data di uscita:</label>
-                            <input type="date" class="form-control" id="sale-date" name="sale-date"
-                                value="{{ $comic->sale_date }}">
+                            <label for="sale_date" class="form-label">Data di uscita:</label>
+                            <input type="date" class="form-control" id="sale_date" name="sale_date"
+                                value="{{ old('sale_date', $comic->sale_date) }}">
                         </div>
                     </div>
                     {{-- TIPO --}}
@@ -86,7 +97,7 @@
                         <div class="mb-3">
                             <label for="artists" class="form-label">Disegnato da:</label>
                             <input type="text" class="form-control @error('artists') is-invalid @enderror" id="artists"
-                                name="artists" value="{{ $comic->artists }}">
+                                name="artists" value="{{ old('artists', $comic->artists) }}">
                         </div>
                     </div>
                     {{-- SCRITTO --}}
@@ -94,7 +105,7 @@
                         <div class="mb-3">
                             <label for="writers" class="form-label">Scritto da:</label>
                             <input type="text" class="form-control @error('writers') is-invalid @enderror" id="writers"
-                                name="writers" value="{{ $comic->writers }}">
+                                name="writers" value="{{ old('writers', $comic->writers) }}">
                         </div>
                     </div>
                 </div>
