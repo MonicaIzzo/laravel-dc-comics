@@ -89,14 +89,24 @@
         </div>
         <div class="d-flex justify-content-center align-items-center">
             <div class="load text-center">
-                <a class="load_more me-3" href="{{ route('comics.create') }}">Aggiungi un COMIC</a>
+                <a class="me-3 btn btn-primary btn-lg" href="{{ route('comics.create') }}">Aggiungi un COMIC</a>
             </div>
             <div class="load text-center">
-                <a class="load_more me-3" href="{{ route('comics.edit', $comic->id) }}">Modifica un COMIC</a>
+                <a class="me-3 btn btn-success btn-lg" href="{{ route('comics.edit', $comic->id) }}">Modifica un
+                    COMIC</a>
             </div>
+            <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <div class="load text-center">
+                    <button class="me-3 btn btn-danger btn-lg" href="{{ route('comics.edit', $comic->id) }}">Elimina
+                        COMIC</button>
+                </div>
+            </form>
             <div class="load text-center">
-                <a class="load_more" href="{{ route('comics.index') }}">Torna indietro</a>
+                <a class="me-3 btn btn-secondary btn-lg" href="{{ route('comics.index') }}">Torna indietro</a>
             </div>
+
 
 
         </div>
