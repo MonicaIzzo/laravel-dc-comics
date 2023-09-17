@@ -35,6 +35,10 @@
     {{-- Importiamo il FOOTER --}}
     @include('includes.footer')
 
+
+    {{-- Importiamo gli script --}}
+    @yield('scripts')
+
 </body>
 
 </html>

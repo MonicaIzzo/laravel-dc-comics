@@ -1,3 +1,6 @@
+{{-- Il placeholder non funziona, non è un problema, la cosa più grave e che non riesco a mandare su (DB) il valore del campo data, se continuando nelle lezioni riesco a capire come si fa, torno inetro e lo metto a posto.
+    IMPORTANTE, il file comics.php in config ha a un cero punto un Arrray di array che andrebbe convertito per poterlo visualizzare in pagina, dovrei cercarmi conme si fa e lascio perdere. se riesco a capire come fre la funzione, modificherò il file di swow --}}
+
 @extends('layouts.layout')
 
 
@@ -33,10 +36,17 @@
                         </div>
                     </div>
                     {{-- COPERTINA --}}
-                    <div class="col-12 mb-3">
+                    <div class="col-10 mb-3">
                         <div class="mb-3">
                             <label for="thumb" class="form-label">Copertina:</label>
                             <input type="url" class="form-control" id="thumb" name="thumb">
+                        </div>
+                    </div>
+                    {{-- ANTEPRIMA COPERTINA --}}
+                    <div class="col-2 mb-3">
+                        <div class="mb-3">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="preview" id="images-preview">
                         </div>
                     </div>
                     {{-- PREZZO --}}
@@ -92,4 +102,25 @@
                 <a class="load_more" href="{{ route('comics.index') }}">TORNA INDIETRO</a>
             </div>
         </div>
+    @endsection
+
+    @section('scripts')
+        <script>
+            const placeholder =
+                "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAHBhUTBxMQExUSFRIQEhYVEg8ODxASFxEXFxUSFRUYKCggGxomGxUaITElJSorLi4uFx8zRDkuNy0tLisBCgoKDQ0NFQ0NDysZFRkrLS0rKysrNysrKysrNzcrKysrKys3KysrLSsrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAABQECBAMGB//EAEEQAQACAAIFBBADBgcAAAAAAAABAgMRBAUSIUExUWGyExUiNUJScXKBgpGSobHB0TJzkyUzNMLS4RQjJGOis/D/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8A/cQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATdN1jfA0yaYVa2iK1tvmaznM24xE83xBSEftni+Jh+9b7MdtMXxcP22BZES2tMXh2KPVvb6wxGsseeOD+nf8AqWC4InbLG4Thfp3/AKm1dYY3GcL3Lx/MkFkSY0/Gjl7HPq2r8c5YnWWL4mH71vsCuI86wxubC9l5+OaloeNOkaJS1oym1a2mM84iZjfGYPYAAAAAAAAAAAAAAAAABD06P2lbyVj4f3XETTe+N/V6sLg9NB0Cuk6PtYs3zm143WmI3XtEbvJDo7U4WW7b8u1M/Pc31T/BR52J/wBlnYgn9qcPnv7a/ZtGqsLwtqfWmOrk7gHH2rwfFn38T7sxq7CjwZ96/wB3Wn6RrOKYk1wKzeY3TOezSJ4xnvmZ8kZA941fheJX07/mf4DB4Up6IiJ9sPLRdYxjYsVxq7Ez+HftVtuzyid2/wBDuBAvSMPSsSKZ5RaIjObWy/y658vTmq6r7308mSViTnpV/Pt8N30VdWd78PprWfbGf1UdQCAAAAAAAAAAAAAAAAAiafu1hbPjFbfDL+VbRdZ2z1ll/t0n/lf7Lg79VRloNembz7bzP1dWe9w4GkRouqqTfxaxEeNOSVebY2Lt3tO34Mxu2OivR8+OYPpBxav0zs/c42UXiM+i0eNH1jpdqDE8m583ok56PTLjWs9MzMcr6VPx9Vxa2ejW2JnfMZbVJnjOW7L0Tkol6TbYwZmvLGVq8+1E51+MQ+kTdH1Xs4sW0m23sznERXYrnHJMxnOeSkCDb9/fz79aVXVne3C/Lp1YSr/vb+ffrSq6s73YfmU6sA6QEAAAAAAAAAAAAAAAABF1lH7Sn8unXxFpH1jv1jP5eH1sRcHFWLWrEYuWVI2a5Z7qxyemePo5ntEMRXKWItv3qhaO6iazMTG+sxyxKpoOm9m7nHyi3DL8N/JzT0fNMliYieXyxwmJ4TEoPoRP0HTtq0U0j8Xg25Iv0dFvn8I7cXErhUzxZiIjlmd0IrccE63wc923PqXiPjDswcauPh7WFMTE/wDsp5pBDv8Ajv5+J15VtXRlq/D8ynVhK0rdpGLEcLfOlZ+crGhfwdPMr1YUewCAAAAAAAAAAAAAAAAAjaynLWU/l4fXxFlF1lP+vtn4lPZnb+64PKXlaZidzes7mcudUeUX5y0bUdyzaM7GU59yBFc6939pjmmJ4S3xb3x5js1tqK/h3ZTnxmct0zw5PnLGzPFmI3A12cmuDiW0XF28D1o8G8c09PNPDybm9p5nnXPMG+JjRpGLiWw4mItOcZxlO6lYn4xMehe0TfotMvFr8oQbVnsW5c0HfoVPMp1YTVe4CAAAAAAAAAAAAAAAAAi61rlrDOeNKRHotfPrQtPHH0XD0iY7PWtss8s4zmM+XL2AhxytsplV7W4Oe6s+i14j2Zna3C4Vn38T7rURppnO9mtMlXtVhRPc7ceve3WmTtXSeW2J7Y+xRJvfZliMXcrTqjCt+Lbn17R8mO02Dwi/6mJ9yiZGLDbskTG5RrqjCjl259b6xvbxqvBjwbe/ifcolzOdVnV3e/D/AC6dWHj2pwea/wCriz9c3Zh0jDpEU3RERERzRHJArYBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//2Q==";
+
+            const copertinaInput = document.getElementById('thumb');
+            const imagePreviewImput = document.getElementById('images-preview');
+
+            imagePreviewImput.addEventListner('input', function() {
+                const url = copertinaInput.value;
+
+                if (url) {
+                    imagePreviewImput.src = url
+                } else {
+                    imagePreviewImput.src = placeholder;
+                }
+            })
+        </script>
+
     @endsection
